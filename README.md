@@ -23,9 +23,8 @@ Browser:
 http://localhost:8081/foo/??bar.js,baz.js
 
 ###Result
-```var fs = require('fs');
+> var fs = require('fs');
 > var express = require('express');
 > var mongoose = require('mongoose');
 > var bunyan = require('bunyan');var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 > var routes = require('./routes');
-```
