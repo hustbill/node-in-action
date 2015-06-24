@@ -30,8 +30,9 @@ pg_restore  -j 4 -O -d  becomebeauty_dev  becomebeauty_dev.dump
 
 3. start four nodejs service: node main services , shop cart , message, party services
 npm install bunyan -g 
+for each service, run two commands below,
 npm install
-run:  node service.js  | bunyan -o short
+node service.js  | bunyan -o short
       
 4. start ruby server and rails
 ruby server.rb -p 9000
