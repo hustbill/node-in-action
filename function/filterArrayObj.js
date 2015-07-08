@@ -1,4 +1,7 @@
 // Filtering an array of objects
+// Ref: http://book.mixu.net/node/ch5.html
+
+
 
 function match(item, filter) {
   var keys = Object.keys(filter);
