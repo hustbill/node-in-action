@@ -1,0 +1,43 @@
+code reading:
+Filename: apiPermissionValidator.js
+
+Three functions : 
+	checkClientIdAndClientSecret, 
+	checkPermission
+	validator
+	
+	Failed to store data into redis
+
+2015.06.25
+payment failed.  what's the reason? 
+shop cart sevices S?
+payment service 
+
+ERROR: Process payment failed. connect ECONNREFUSED
+
+Update payment_state of order from `balance_due` to `failed`.
+
+ERROR Pulse: Payment failed. connect ECONNREFUSED
+
+
+
+Failed to read key 'MMD.ZoneIds_1074_10074' from memcache:
+
+
+Getting available shipping zone ids of order 574
+Getting zone ids of address 5799
+
+
+WARN : Fialed to ready key "MMD.ZoneIds_1074_10074"
+WARN: Failed to store data into memcache 'undefined'.
+
+11:46:14.187 <0.22169.0> [error] [authorize_net_tokens:decode_customer_profile_response:206] status:"Error" code:"E00039" text:"A duplicate record with ID 35766204 already exists."
+
+
+32:12.923Z ERROR Pulse: Error when sending mail of type orders/confirmations: connect ECONNREFUSED (worker=null, ip=127.0.0.1, request-line="POST /v2/registrations HTTP/1.1", device-info=unknown)
+20:32:12.925Z DEBUG Pulse: Executing: SELECT * FROM "products" WHERE "id"=11 LIMIT 1; (worker=null)
+
+[Root Clause]
+Need to setup  the mail services and message services. 
+
+

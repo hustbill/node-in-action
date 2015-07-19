@@ -1,0 +1,17 @@
+
+
+  {
+  "name": "learn-promise",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^2.9.24"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4",
+    "rewire": "^2.3.1"
+  }
+}
+
