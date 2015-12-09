@@ -1,3 +1,6 @@
+//Node.js Error Handling Patterns
+// ref: http://www.nodewiz.biz/nodejs-error-handling-pattern/
+//
 var match = function match(foo,bar,next) {
     if ( foo !== bar ) {
         next( new Error("no match") );
