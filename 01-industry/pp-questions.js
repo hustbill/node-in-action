@@ -32,3 +32,21 @@ var Bob = {
 console.log(Bob.name_fn()) //"Bob"
 var fn = Bob.name_fn
 console.log(fn()) //undefined  
+
+
+
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+// first , third, second
+
+console.log('node.js version')
+
+
+console.log("first");
+setImmediate(function(){
+    console.log("second");
+});
+console.log("third");
