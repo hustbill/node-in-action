@@ -1,0 +1,16 @@
+*** Completed ***
+
+
+
+
+
+*** To do list ***
+
+1. Using Nodes.js to read the node and edge data from InfluxDB
+2. Node detail for each node ( image, position, packet, latency and bandwidth)
+3. Arrow line show source node and destination node
+4. Alert or Alarm when approach the limitation
+
+
+
+*** Issues ***
