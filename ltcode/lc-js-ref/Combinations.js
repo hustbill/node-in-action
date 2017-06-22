@@ -20,9 +20,9 @@ If n = 4 and k = 2, a solution is:
  */
 var combine = function(n, k) {
     var result = [];
-    
+
     helper(1, [], n, k, result);
-    
+
     return result;
 };
 
@@ -31,13 +31,13 @@ function helper(start, curArr, n, k, result) {
         result.push(curArr);
         return;
     }
-    
+
     var i,
         temp;
-     
+
     for (i = start; i <= n; i++) {
         curArr.push(i);
-        helper(i + 1, curArr.concat(), n, k, result);
+        helper(i + 1, curArr.concat(), n, k, result); // curArr.concat is key point
         curArr.pop();
     }
 }
