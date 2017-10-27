@@ -1,0 +1,22 @@
+{
+  "name": "opera-server-mongo",
+  "version": "0.1.0",
+  "description": "opera backend services using mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "opera;",
+    "mongodb"
+  ],
+  "author": "hua zhang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
