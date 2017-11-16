@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container
+      .row
+        .logo
+          h3
+           = title
+      .row
+        .span12
+          .mini-layout
+            h3 Partners Listing
+             a(href='/exporttocsv' style="margin-left: 60%;") Export to CSV
+
+            table.table.table-bordered
+              thead
+                tr
+                  th ID
+                  th apiKey
+                  th env
+                  th product
+                  th partnerName
+                if partners.length
+                each item in partners
+                 tr
+                   td #{item['_id']}
+                   td #{item['apiKey']}
+                   td #{item['env']}
+                   td #{item['product']}
+                   td #{item['partnerName']}
