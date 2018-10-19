@@ -1,0 +1,22 @@
+{
+  "name": "stackstorm-nodejs",
+  "version": "1.0.0",
+  "description": "stackstorm nodejs client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "StackStorm",
+    "NodeJS",
+    "client"
+  ],
+  "author": "hua zhang",
+  "license": "ISC",
+  "dependencies": {
+    "nock": "^0.50.0",
+    "promise-polyfill": "^2.1.0",
+    "request": "^2.88.0",
+    "st2client": "^1.1.1"
+  }
+}
