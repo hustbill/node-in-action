@@ -1,0 +1,4811 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "created": {
+    "at": "2018-11-30 13:24:11",
+    "by": "sbellapu"
+  },
+  "editMode": false,
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 5038,
+  "lastModified": {
+    "at": 1543469686390,
+    "by": "sbellapu"
+  },
+  "links": [],
+  "refresh": false,
+  "rows": [
+    {
+      "collapse": false,
+      "height": 32,
+      "panels": [
+        {
+          "content": "",
+          "id": 3,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Replica OCE",
+          "type": "text"
+        },
+        {
+          "content": "",
+          "id": 4,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Core OCE",
+          "type": "text"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": -22,
+      "panels": [
+        {
+          "content": "",
+          "id": 17,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Stream",
+          "type": "text"
+        },
+        {
+          "content": "",
+          "id": 29,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Stream",
+          "type": "text"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 214,
+      "panels": [
+        {
+          "aliasColors": {
+            "commit-latency": "#3F6833",
+            "data.vds2.pse.KStreamMain.streams.poll-latency-avg{dc=oce}": "#890F02",
+            "data.vds2.pse.KStreamMain.streams.poll-rate{dc=oce}": "#1F78C1",
+            "data.vds2.pse.KStreamMain.streams.process-latency-avg{dc=oce}": "#1F78C1",
+            "poll-latency": "#890F02",
+            "process-latency": "#CCA300"
+          },
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for polling, across all running tasks of this thread.",
+          "fill": 1,
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "poll-latency",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.poll-latency-avg",
+              "refId": "A"
+            },
+            {
+              "aggregator": "avg",
+              "alias": "process-latency",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.process-latency-avg",
+              "refId": "B"
+            },
+            {
+              "aggregator": "avg",
+              "alias": "commit-latency",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.commit-latency-avg",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe time for polling",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "poll-rate": "#890F02",
+            "process-rate": "#3F6833"
+          },
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of polls per second.",
+          "fill": 1,
+          "id": 5,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "poll-rate",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.poll-rate",
+              "refId": "A"
+            },
+            {
+              "aggregator": "avg",
+              "alias": "process-rate",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.process-rate",
+              "refId": "B"
+            },
+            {
+              "aggregator": "avg",
+              "alias": "commit-rate",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.commit-rate",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Polls per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for polling, across all running tasks of this thread.",
+          "fill": 1,
+          "id": 30,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.poll-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe time for polling",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of polls per second.",
+          "fill": 1,
+          "id": 31,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.poll-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Polls per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 187,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for processing, across all running tasks of this thread",
+          "fill": 1,
+          "id": 6,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.process-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe for processing",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of process calls per second.",
+          "fill": 1,
+          "id": 7,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.process-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg process second.",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for processing, across all running tasks of this thread",
+          "fill": 1,
+          "id": 32,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.process-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe for processing",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of process calls per second.",
+          "fill": 1,
+          "id": 33,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.process-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg process second.",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 156,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for committing, across all running tasks of this thread.",
+          "fill": 1,
+          "id": 8,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.commit-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe for committing",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of commits per second.",
+          "fill": 1,
+          "id": 9,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "",
+              "filters": [
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.streams.commit-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg commits per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average execution time in ms for committing, across all running tasks of this thread.",
+          "fill": 1,
+          "id": 34,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.commit-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg exe for committing",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of commits per second.",
+          "fill": 1,
+          "id": 35,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "",
+              "filters": [
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.streams.commit-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg commits per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 18,
+      "panels": [
+        {
+          "content": "",
+          "id": 15,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Consumer",
+          "type": "text"
+        },
+        {
+          "content": "",
+          "id": 36,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Consumer",
+          "type": "text"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 169,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes consumed per second",
+          "fill": 1,
+          "id": 10,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.consumer.bytes-consumed-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Bytes consumer per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average time taken for a fetch request.",
+          "fill": 1,
+          "id": 11,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.consumer.fetch-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg time taken for a fetch request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes consumed per second",
+          "fill": 1,
+          "id": 37,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.consumer.bytes-consumed-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Bytes consumer per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average time taken for a fetch request.",
+          "fill": 1,
+          "id": 38,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.consumer.fetch-latency-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg time taken for a fetch request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 239,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes fetched per request",
+          "fill": 1,
+          "id": 12,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.consumer.fetch-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg bytes fetched per request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of records in each request for a topic",
+          "fill": 1,
+          "id": 62,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.consumer.records-per-request-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Records Per Request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes fetched per request",
+          "fill": 1,
+          "id": 39,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.consumer.fetch-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg bytes fetched per request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of records in each request for a topic",
+          "fill": 1,
+          "id": 63,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.consumer.records-per-request-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Records Per Request",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 1,
+      "panels": [
+        {
+          "content": "",
+          "id": 16,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Producer",
+          "type": "text"
+        },
+        {
+          "content": "",
+          "id": 41,
+          "links": [],
+          "mode": "markdown",
+          "span": 6,
+          "title": "Producer",
+          "type": "text"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 221,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of records sent per second.",
+          "fill": 1,
+          "id": 18,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.record-send-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg records sent per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average length of time the I/O thread spent waiting for a socket ready for reads or writes in nanoseconds.",
+          "fill": 1,
+          "id": 19,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.io-wait-time-ns-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Socket I/O wait time",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ns",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of records sent per second.",
+          "fill": 1,
+          "id": 42,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.record-send-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg records sent per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average length of time the I/O thread spent waiting for a socket ready for reads or writes in nanoseconds.",
+          "fill": 1,
+          "id": 43,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.io-wait-time-ns-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Socket I/O wait time",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ns",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 217,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The current number of active connections.",
+          "fill": 1,
+          "id": 20,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "disableDownsampling": false,
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.connection-count",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Active Connections",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Connections closed per second in the window.",
+          "fill": 1,
+          "id": 21,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.connection-close-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Connection close rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The current number of active connections.",
+          "fill": 1,
+          "id": 44,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "disableDownsampling": false,
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "downsampleInterval": "1m",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.connection-count",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Active Connections",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Connections closed per second in the window.",
+          "fill": 1,
+          "id": 45,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "sum",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.connection-close-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Connection close rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 247,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Bytes/second read off all sockets.",
+          "fill": 1,
+          "id": 22,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.incoming-byte-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Incoming byte rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of outgoing bytes sent per second to all servers.",
+          "fill": 1,
+          "id": 23,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.outgoing-byte-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Outgoing byte rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Bytes/second read off all sockets.",
+          "fill": 1,
+          "id": 46,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.incoming-byte-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Incoming byte rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of outgoing bytes sent per second to all servers.",
+          "fill": 1,
+          "id": 47,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.outgoing-byte-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Outgoing byte rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 225,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 24,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.record-retry-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Retry rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 25,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.record-error-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Error rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 48,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.record-retry-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Retry rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 49,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.record-error-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Error rate",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 241,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes sent per partition per-request.",
+          "fill": 1,
+          "id": 26,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.batch-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Batch Size",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Responses received sent per second.",
+          "fill": 1,
+          "id": 27,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.response-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Response rate per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average number of bytes sent per partition per-request.",
+          "fill": 1,
+          "id": 50,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.batch-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Batch Size",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "Responses received sent per second.",
+          "fill": 1,
+          "id": 51,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.response-rate",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Response rate per sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The maximum amount of buffer memory the client can use (whether or not it is currently used).",
+          "fill": 1,
+          "id": 52,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.buffer-total-bytes",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Buffer total bytes",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The total amount of buffer memory that is not being used (either unallocated or in the free list).",
+          "fill": 1,
+          "id": 54,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.buffer-available-bytes",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Buffer Available Bytes (un-used)",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The maximum amount of buffer memory the client can use (whether or not it is currently used).",
+          "fill": 1,
+          "id": 53,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.buffer-total-bytes",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Buffer total bytes",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The total amount of buffer memory that is not being used (either unallocated or in the free list).",
+          "fill": 1,
+          "id": 55,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "disableDownsampling": false,
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.buffer-available-bytes",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Buffer Available Bytes (un-used)",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The current number of in-flight requests awaiting a response.",
+          "fill": 1,
+          "id": 58,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.requests-in-flight",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Requests in flight",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average record size",
+          "fill": 1,
+          "id": 60,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.KStreamMain.producer.record-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Record Size",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The current number of in-flight requests awaiting a response.",
+          "fill": 1,
+          "id": 59,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.requests-in-flight",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Requests in flight",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "description": "The average record size",
+          "fill": 1,
+          "id": 61,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "avg",
+              "alias": "$tag_host",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "oce",
+                  "groupBy": true,
+                  "tagk": "dc",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$kf_host",
+                  "groupBy": true,
+                  "tagk": "host",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "data.vds2.pse.ExecutionEngineDriver.producer.record-size-avg",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Avg Record Size",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "sl73caehdp2701|sl73caehdp3101|sl73caehdp4701|sl73caehdp5001|sl73caehdp6101",
+          "value": "sl73caehdp2701|sl73caehdp3101|sl73caehdp4701|sl73caehdp5001|sl73caehdp6101"
+        },
+        "hide": 2,
+        "includeAll": false,
+        "label": "kf_host",
+        "multi": false,
+        "name": "kf_host",
+        "options": [
+          {
+            "selected": true,
+            "text": "sl73caehdp2701|sl73caehdp3101|sl73caehdp4701|sl73caehdp5001|sl73caehdp6101",
+            "value": "sl73caehdp2701|sl73caehdp3101|sl73caehdp4701|sl73caehdp5001|sl73caehdp6101"
+          }
+        ],
+        "query": "sl73caehdp2701|sl73caehdp3101|sl73caehdp4701|sl73caehdp5001|sl73caehdp6101",
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "utc",
+  "title": "VDS2_replica_metrics",
+  "version": 6
+}
