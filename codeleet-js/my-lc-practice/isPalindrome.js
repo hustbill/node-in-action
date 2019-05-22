@@ -50,3 +50,18 @@ function length() {
 const input = "A man, a plan, a canal: Panama";
 
 console.log("input: " + input + ", is Palindrome: \n" + isPalindrome(input));
+
+var isPalindrome = function(s) {
+    var ts = s.replace(/[^a-z0-9]/gi,'').toLowerCase();
+    var rs =  new Array();
+    for (var i= ts.length -1 ; i >= 0; i--) {
+        rs.push(ts[i]);
+    }
+
+    // console.log(rs.join(''));
+    return rs.join('') == ts;
+};
+/*
+Runtime: 68 ms, faster than 97.88% of JavaScript online submissions for Valid Palindrome.
+Memory Usage: 38.7 MB, less than 38.98% of JavaScript online submissions for Valid Palindrome.
+*/
