@@ -1,0 +1,14 @@
+{
+  "name": "node-in-practice-demo",
+  "version": "1.0.0",
+  "description": "node in practice demo cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "node-in-practice"
+  ],
+  "author": "hua zhang",
+  "license": "MIT"
+}
