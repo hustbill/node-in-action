@@ -27,7 +27,9 @@ mongoose.connect(mongoUri, {
 app.oauth = new OAuth2Server({
 	model: require('./model.js'),
 	accessTokenLifetime: 60 * 60,
-	allowBearerTokensInQueryString: true
+	allowBearerTokensInQueryString: true,
+	grants: ['password', 'authorization_code', 'refresh_token'],
+	debug: true
 });
 
 app.all('/oauth/token', obtainToken);
@@ -43,8 +45,11 @@ function obtainToken(req, res) {
 
 	var request = new Request(req);
 	var response = new Response(res);
+	var options = {
+		alwaysIssueNewRefreshToken: false
+	}
 
-	return app.oauth.token(request, response)
+	return app.oauth.token(request, response, options)
 		.then(function(token) {
 
 			res.json(token);

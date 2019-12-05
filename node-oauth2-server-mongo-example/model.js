@@ -114,6 +114,7 @@ var getAccessToken = function(token, callback) {
 	}).bind(null, callback));
 };
 
+
 var getClient = function(clientId, clientSecret, callback) {
 
 	clientModel.findOne({
@@ -129,7 +130,16 @@ var getClient = function(clientId, clientSecret, callback) {
 	}).bind(null, callback));
 };
 
+/**
+ *  Invoked to save an access token and optionally a refresh token, depending on the grant type.
+ * @param {*} token 
+ * @param {*} client 
+ * @param {*} user 
+ * @param {*} callback 
+ */
 var saveToken = function(token, client, user, callback) {
+	console.log('saveToken');
+	console.log('token: ', token);
 
 	token.client = {
 		id: client.clientId
@@ -138,9 +148,12 @@ var saveToken = function(token, client, user, callback) {
 	token.user = {
 		username: user.username
 	};
+	
 
 	var tokenInstance = new tokenModel(token);
+
 	tokenInstance.save((function(callback, err, token) {
+		
 
 		if (!token) {
 			console.error('Token not saved');
@@ -200,6 +213,7 @@ var getUserFromClient = function(client, callback) {
  */
 
 var getRefreshToken = function(refreshToken, callback) {
+	console.log('getRefreshToken', refreshToken);
 
 	tokenModel.findOne({
 		refreshToken: refreshToken
@@ -208,10 +222,15 @@ var getRefreshToken = function(refreshToken, callback) {
 		if (!token) {
 			console.error('Token not found');
 		}
-
+		console.log('getRefreshToken, token ', token);
 		callback(err, token);
 	}).bind(null, callback));
 };
+
+var generateRefreshToken = function (refreshToken, callback) {
+	console.log('generateRefreshToken');
+}
+
 
 var revokeToken = function(token, callback) {
 
