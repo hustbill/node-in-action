@@ -1,0 +1,22 @@
+{
+  "name": "oauth2-mongodb-sample",
+  "version": "1.0.0",
+  "description": "nodejs oauth2 mongodb sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oauth2",
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "hua zhang",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13",
+    "oauth2-server": "^2.4.1"
+  }
+}
